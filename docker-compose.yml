@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+ nginx:
+  container_name: nginx-default
+  image: rpi-nginx-default
+  network_mode: "host"
+  ports:
+   - 80:80
+   - 443:443
+  volumes:
+   - /etc/ssl/localcerts:/etc/ssl/localcerts
